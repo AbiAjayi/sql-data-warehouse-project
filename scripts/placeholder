@@ -5,7 +5,7 @@ Stored Procedure for the Bronze Schema:
              Performed a bulk insert to load all data into the table.
              Monitor the ETL process by recording the start and end times to track the duration of the data load.
              Implement tracking in the bronze layer to calculate the total time taken to load the bronze schema.
-============================================================================================================
+===============================================================================================================
 /*
 
 
