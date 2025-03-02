@@ -1,4 +1,4 @@
-# sql-data-warehouse-project
+# SQL-Data-Warehouse-Project
 Developing a data warehouse using SQL Server, covering ETL processes, data modeling, and analytics. This project demonstrates a comprehensive approach to data warehousing and analytics, from building the data warehouse to generating actionable insights. It showcases best practices in data engineering, including efficient data integration, schema design, and performance optimization. Additionally, it emphasizes using advanced analytics to turn raw data into meaningful business intelligence, ensuring data integrity, scalability, and effective reporting.
 
 ### Objective
