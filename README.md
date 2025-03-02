@@ -11,3 +11,9 @@ This project involves:
                    - The silver layer contains cleaned and standardized data, while the gold layer has views and business-ready data for analytical and reporting purposes
 - ETL Pipelines: Extracting, transforming, and loading data from the source systems into the data warehouse
 - Data Modeling: Developing the facts and dimension tables for analytical queries
+
+### Data Architecture
+The data architecture of this project follows the medallion architecture Bronze, Silver and Gold layers:
+
+![image](https://github.com/user-attachments/assets/cadbcc75-6d44-4d7d-b7ed-9e215ea86e3e)
+
