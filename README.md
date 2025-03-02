@@ -6,14 +6,18 @@ Create a modern data warehouse using SQL Server to centralize sales data, enable
 
 ### Project Overview
 This project involves: 
-- Data Architecture: - Designing a modern data warehouse using the Medallion architecture Bronze, silver, and gold layer.
-                   - The bronze layer contains the raw data from the data source 
-                   - The silver layer contains cleaned and standardized data, while the gold layer has views and business-ready data for analytical and reporting purposes
-- ETL Pipelines: Extracting, transforming, and loading data from the source systems into the data warehouse
-- Data Modeling: Developing the facts and dimension tables for analytical queries
+- Data Architecture: Designed a structured data pipeline with Bronze, Silver, and Gold layers.
+- ETL Pipelines: Developed ETL processes to efficiently extract, transform, and load (ETL) data from source systems into the data warehouse.
+- Data Modeling: Designed fact and dimension tables using industry best practices to support analytical queries and reporting.
 
 ### Data Architecture
-The data architecture of this project follows the medallion architecture Bronze, Silver and Gold layers:
+The data architecture of this project follows the medallion architecture Bronze, Silver, and Gold layers:
 
 ![image](https://github.com/user-attachments/assets/cadbcc75-6d44-4d7d-b7ed-9e215ea86e3e)
+
+1. Bronze Layer: This layer holds raw data sourced from CSV files, which were ingested into the SQL Server. No transformations or modeling were applied at this stage.
+
+2. Silver Layer: In this phase, extensive data cleaning, transformation, and normalization were performed. New columns were derived, and data quality checks were conducted. Additionally, stored procedures were created for all table files to streamline processing.
+
+3. Gold Layer: This layer contains integrated, cleaned, and business-ready data for reporting and analytics. A data model was developed using the star schema methodology, defining dimension and fact tables and their relationships. Views were created to simplify reporting and enhance user accessibility.
 
