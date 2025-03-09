@@ -13,21 +13,21 @@ A structured data warehouse addresses these challenges by providing a centralize
 ## 2. Data Architecture
 ### 2.1 Medallion Architecture (Bronze, Silver, Gold Layers)
 The project adopts a multi-layered approach:
--	Bronze Layer: Raw data ingestion from CSV files into SQL Server without transformations.
+-	Bronze Layer: Raw data ingestion from CSV and ERP files into SQL Server without transformations.
 -	Silver Layer: Data cleaning, transformation, normalization, and quality checks.
 -	Gold Layer: Business-ready, structured data optimized for reporting using the Star Schema.
 ### 2.2 Schema Design
 The data warehouse schema follows the Star Schema approach with:
 -	Fact Table: Sales Transactions (OrderID, CustomerID, ProductID, Amount, Date)
--	Dimension Tables: Customers, Products, Time, Locations
+-	Dimension Tables: Customers, Products, Locations
 ### 2.3 Data Sources
 Data is ingested from:
--	CSV Files containing transactional sales data.
--	ERP Files
+-	CSV Files containing transactional and descriptive data.
+-	ERP Files containing both transactional and descriptive data
 
 ## 3. ETL Process
 ### 3.1 Data Extraction
--	CSV files are loaded into staging tables using SQL Server’s BULK INSERT.
+-	CSV and ERP files are loaded into staging tables using SQL Server’s BULK INSERT.
 -	Data is extracted from transactional databases.
 ### 3.2 Data Transformation
 -	Standardization of column formats.
@@ -40,9 +40,8 @@ Data is ingested from:
 ### 4.1 Fact and Dimension Tables
 -	Fact Table: Sales_Fact (OrderID, CustomerID, ProductID, SalesAmount, OrderDate)
 -	Dimension Tables: 
- -	Customer_Dim (CustomerID, Name, Location, Segment)
+ -	Customer_Dim (CustomerID, Name, Location)
  -	Product_Dim (ProductID, Name, Category, Price)
- -	Time_Dim (DateID, Year, Month, Day, Weekday)
 ### 4.2 Performance Optimization
 -	Indexing on foreign keys for faster joins.
 -	Partitioning large tables for efficient querying.
