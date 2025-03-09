@@ -36,15 +36,46 @@ Data is ingested from:
 ### 3.3 Data Loading
 -	Stored Procedures used to transform and load data into the Gold Layer.
 -	Indexing and partitioning techniques applied for performance optimization.
+## 4. Data Modeling
+### 4.1 Fact and Dimension Tables
+-	Fact Table: Sales_Fact (OrderID, CustomerID, ProductID, SalesAmount, OrderDate)
+-	Dimension Tables: 
+ -	Customer_Dim (CustomerID, Name, Location, Segment)
+ -	Product_Dim (ProductID, Name, Category, Price)
+ -	Time_Dim (DateID, Year, Month, Day, Weekday)
+### 4.2 Performance Optimization
+-	Indexing on foreign keys for faster joins.
+-	Partitioning large tables for efficient querying.
+-	Views created for user-friendly access to aggregated data.
+
+## 5. Analytics and Business Intelligence
+### 5.1 Querying the Data Warehouse
+-Complex SQL queries written for analytical insights.
+-	Use of window functions, CTEs, and aggregations for trend analysis.
+### 5.2 Data Visualization with Power BI
+-	Interactive dashboards for tracking sales performance.
+-	Key metrics displayed: Revenue Trends, Top-Selling Products, Customer Segmentation.
+### 5.3 Business Insights
+-	Identified peak sales periods for marketing strategies.
+-	Customer behavior analysis led to improved product recommendations.
+-	Optimization of inventory management based on sales trends.
+
+## 6. Challenges and Solutions
+-	Data Quality Issues: Resolved using rigorous validation checks.
+-	Performance Bottlenecks: Addressed through indexing and optimized query execution plans.
+-	ETL Failures: Handled by implementing error logging and automated retries.
+
+## 7. Conclusion and Future Enhancements
+### 7.1 Summary of Achievements
+-	Successfully built a scalable and optimized data warehouse.
+- Improved data integrity and accessibility for decision-makers.
+### 7.2 Future Enhancements
+-	Automation of ETL pipelines to reduce manual intervention.
+-	Integration with cloud platforms for real-time analytics.
+-	Advanced machine learning models for predictive insights.
 
 
 
 
 ![image](https://github.com/user-attachments/assets/cadbcc75-6d44-4d7d-b7ed-9e215ea86e3e)
-
-1. Bronze Layer: This layer holds raw data sourced from CSV files, which were ingested into the SQL Server. No transformations or modeling were applied at this stage.
-
-2. Silver Layer: In this phase, extensive data cleaning, transformation, and normalization were performed. New columns were derived, and data quality checks were conducted. Additionally, stored procedures were created for all table files to streamline processing.
-
-3. Gold Layer: This layer contains integrated, cleaned, and business-ready data for reporting and analytics. A data model was developed using the star schema methodology, defining dimension and fact tables and their relationships. Views were created to simplify reporting and enhance user accessibility.
 
